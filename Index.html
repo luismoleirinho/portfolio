@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's get to work!</title>
+
+     <meta name="description" content="Luis is a multidisciplinary designer based in Lisbon. Focused on digital, human-centered products, accessibility, and intuitive experiences.">
+<meta name="keywords" content="Luis, portfolio, multidisciplinary designer, digital design, UI design, UX design, accessibility, branding, prototyping, Lisbon">
+<meta property="og:title" content="Luis | Multidisciplinary Designer">
+<meta property="og:description" content="Designing intuitive, human-centered digital products — from clean UIs to bold brands. Explore Luis' portfolio and creative side quests.">
+
+  <meta property="og:image" content="https://strixinternational.com/assets/img/atrelado.jpg">
+  <meta property="og:url" content="https://luismoleirinho.github.io/portfolio/assets/luis.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Favicons -->
+  <link href="assets/favicon-32x32.png" rel="icon">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+<video id="background-video" autoplay muted loop playsinline>
+        <source src="assets/portfolio.mp4" type="video/mp4">
+    </video>
+       
+        <div class="overlay">
+            <!-- Cool Morphing Text Effect -->
+            <div id="container">
+                <span id="text1"></span>
+                <span id="text2"></span>
+            </div>
+            
+            <div class="custom-cursor"></div>
+
+            <!-- Buttons -->
+            <a href="https://www.figma.com/deck/VlC5XOQJChGBdGFSZv78WF/Luis-Tomaz-Moleirinho-%7C-Portfolio?node-id=2-30&t=YmyzNJZ9lYpFBqp0-1" target="_blank" class="work-button">Work</a>
+            <a href="https://www.linkedin.com/in/luistomazmoleirinho/" target="_blank" class="contact-button">Contact</a>
+        </div>
+    </div>
+
+
+    <!-- SVG Filter for Text Effect -->
+    <svg id="filters">
+        <defs>
+            <filter id="threshold">
+                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                        0 1 0 0 0
+                                        0 0 1 0 0
+                                        0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>

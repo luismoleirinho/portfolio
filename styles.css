@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;900&display=swap");
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    cursor: none;
+}
+
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+/* Cool Text Effect */
+#container {
+    width: 100%;
+    max-width: 90vw; /* Limit the width of the text container */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: url(#threshold) blur(0.6px);
+    overflow-wrap: break-word; /* Allow text to break to the next line */
+    word-wrap: break-word; /* Fallback for older browsers */
+}
+
+/* Text spans for the morphing effect */
+#text1, #text2 {
+    position: absolute;
+    width: 100%;
+    font-family: "roboto", sans-serif;
+    font-weight: 900;
+    user-select: none;
+    color: white;
+    line-height: 1.2; /* Adjust line-height for better spacing */
+    white-space: normal; /* Allow text to wrap */
+    word-break: break-word; /* Ensure long words break and don't overflow */
+}
+
+/* Responsive text size */
+#text1, #text2 {
+    font-size: 8vw; /* Adjusts the font size relative to the viewport width */
+}
+
+/* Smaller screens (tablets and phones) */
+@media screen and (max-width: 768px) {
+    #text1, #text2 {
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #text1, #text2 {
+        font-size: 12vw;
+    }
+}
+
+/* Button Base */
+.work-button,
+.contact-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: 0.75em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: filter 0.3s ease;
+}
+
+/* Arrow Animation */
+@keyframes moveArrowRight {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(4px); }
+}
+
+@keyframes moveArrowLeft {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(-4px); }
+}
+
+/* WORK: Arrow on the left */
+.work-button::before {
+  content: "→";
+  display: inline-block;
+  animation: moveArrowRight 1s infinite ease-in-out;
+}
+
+/* CONTACT: Arrow on the right */
+.contact-button::after {
+  content: "←";
+  display: inline-flex;
+  animation: moveArrowLeft 1s infinite ease-in-out;
+}
+
+/* Blur on hover */
+.work-button:hover,
+.contact-button:hover {
+  filter: blur(2px);
+}
+
+/* Positioning */
+.work-button {
+  top: 40px;
+  right: 40px;
+}
+
+.contact-button {
+  bottom: 40px;
+  left: 40px;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease;
+}
+
+
+.contactbody {
+      margin: 0;
+      height: 100vh;
+      background-color: white;
+      overflow: hidden;
+      font-family: 'Roboto', sans-serif;
+      cursor: none;
+    }
+
+    /* WORK and BACK buttons */
+    .work-button-contact,
+    .back-button-contact {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 0.75em;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: filter 0.3s ease;
+    }
+
+    .work-button-contact {
+      top: 40px;
+      right: 40px;
+    }
+
+    .back-button-contact {
+      bottom: 40px;
+      left: 40px;
+    }
+
+    .work-button-contact::before {
+      content: "→";
+      display: inline-block;
+      animation: moveArrowRight 1s infinite ease-in-out;
+    }
+
+    .back-button-contact::after {
+      content: "←";
+      display: inline-block;
+      animation: moveArrowLeft 1s infinite ease-in-out;
+    }
+
+    .work-button-contact:hover,
+    .back-button-contact:hover {
+      filter: blur(2px);
+    }
+
+    @keyframes moveArrowRight {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(4px);
+      }
+    }
+
+    @keyframes moveArrowLeft {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(-4px);
+      }
+    }
+
+    /* Floating email effect */
+    .floating-email {
+      position: absolute;
+      color: rgb(0, 0, 0);
+      font-size: 1.25em;
+      white-space: nowrap;
+      animation: floatAround 12s linear infinite alternate;
+    }
+
+    @keyframes floatAround {
+      0% {
+        transform: translate(5vw, 10vh);
+      }
+
+      20% {
+        transform: translate(70vw, 25vh);
+      }
+
+      40% {
+        transform: translate(45vw, 70vh);
+      }
+
+      60% {
+        transform: translate(10vw, 80vh);
+      }
+
+      80% {
+        transform: translate(85vw, 45vh);
+      }
+
+      100% {
+        transform: translate(20vw, 20vh);
+      }
+    }
