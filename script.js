@@ -40,22 +40,17 @@ const texts = [
   "I craft experiences that feel intuitive,",
   "and interfaces that actually make sense",
   "No confusion. No chaos.",
-  "Unless, of course, that’s the point",
+  "Unless, of course, that’s the point!",
   "I'm also passionate about accessibility.",
   "Because good design should never leave anyone out.",
-  "So...",
-  "Need a clean UI?",
-  "A bold brand identity?",
-  "Or a prototype that doesn’t collect dust?",
-  "I’ve got you covered.",
-  "Click on “work” to see what I’ve been up to.",
-  "And yes — like any designer, my portfolio is always a work in progress.",
+  "Currently this website in under work",
+  "And yes... like any designer, my website is always a work in progress.",
   "I’ve learned to embrace it as part of the craft.",
   "Because design is never really finished, only paused.",
-  "Which is both exciting and slightly chaotic ⚡",
-  "But hey... that’s what keeps it fun.",
-  "And hopefully, that’s what keeps it human too!",
-  "You can also contact me directly.",
+  "Bit I've got you covered",
+  "Click on “work” to see what I’ve been up to.",
+  "You can also contact me directly at:",
+  "moleirinhoatwork@gmail.com",
   "Even if you just want to chat.",
   "About cinema, for example.",
   "Did you know Danny Boyle directed a sci-fi movie?",
@@ -187,4 +182,5 @@ function animate() {
 }
 
 animate();
+
 
