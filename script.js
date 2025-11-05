@@ -43,7 +43,7 @@ const texts = [
   "Unless, of course, that’s the point!",
   "I'm also passionate about accessibility.",
   "Because good design should never leave anyone out.",
-  "Currently this website in under work",
+  "Currently this website is under work",
   "And yes... like any designer, my website is always a work in progress.",
   "I’ve learned to embrace it as part of the craft.",
   "Because design is never really finished, only paused.",
@@ -182,5 +182,6 @@ function animate() {
 }
 
 animate();
+
 
 
